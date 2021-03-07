@@ -359,6 +359,25 @@ void program::setCurrentUser(userProfile* user) {
 
 void program::chat_f(){
 	userProfile* other = this->match_score_outside();
-	char line[500] = "";
+	userProfile* other = this->match_score_outside();
+	string toWrite = "";
+	
+	cout << "enter user " << this->current_user->name << " message: ";
+	std::getline(toWrite, std::in);
+	cout << "enter user " << other->name << " message: ";
+	std::getline(toWrite, std::in);
+	cout << "enter user " << this->current_user->name << " message: ";
+	std::getline(toWrite, std::in);
+	cout << "enter user " << other->name << " message: ";
+	std::getline(toWrite, std::in);
+	cout<<"how would you rate your conversation user(1-10)<<this->current_uers->name<<":";
+	int i = 0;
+	cin>>i;
+	cout<<"how would you rate your conversation user(1-10)<<other->name<<":";
+	int j = 0;
+	cin>>j
+	chat_rating = ((double)i)+j/2;
+	storeChat(other);
+	
 
 }
